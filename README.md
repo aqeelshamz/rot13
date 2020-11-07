@@ -1,14 +1,55 @@
-# rot13
-
-A new Flutter package project.
+Flutter package to encode / decode string to ROT13
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+To use this plugin, add `rot13` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+**To Encode / Decode String to ROT13:**
+
+* **`rot13(String string)`** - Encode / Decode a string to ROT13
+
+## Example
+![example](https://raw.githubusercontent.com/aqeelshamz/rot13/main/images/1.png)
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:rot13/rot13.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  String rot13Text = "";
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("ROT 13 Demo"),
+        ),
+        body: SafeArea(
+          child: Column(
+            children: [
+              TextField(
+                onChanged: (txt) {
+                  setState(() {
+                    rot13Text = rot13(txt);
+                  });
+                },
+              ),
+              SizedBox(height: 20),
+              Text("Output: $rot13Text")
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
