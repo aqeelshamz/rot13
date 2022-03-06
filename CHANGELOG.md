@@ -5,3 +5,7 @@
 ## [0.0.2] - example added
 
 * Example added
+
+## [1.0.0] - Null safety
+
+* Migrated to null safety
