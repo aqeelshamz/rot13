@@ -1,6 +1,6 @@
 library rot13;
 
-Map<String, String> _charset = {
+const Map<String, String> _charset = {
   "A": "N",
   "B": "O",
   "C": "P",
@@ -57,14 +57,13 @@ Map<String, String> _charset = {
 
 ///Encrypt / Decrypt [string] by ROT13
 rot13(String string) {
-  String encrypted = "";
+  var encrypted = StringBuffer();
   for (int i = 0; i < string.length; i++) {
     if (_charset.keys.contains(string[i])) {
-      encrypted += _charset[string[i]];
+      encrypted.writeAll([_charset[string[i]]]);
     } else {
-      encrypted += string[i];
+      encrypted.writeAll([string[i]]);
     }
   }
-
   return encrypted;
 }
