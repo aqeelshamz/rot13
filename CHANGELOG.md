@@ -6,6 +6,6 @@
 
 * Example added
 
-## [1.0.0] - Null safety
+## [1.0.1] - Null safety
 
 * Migrated to null safety
