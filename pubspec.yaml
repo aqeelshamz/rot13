@@ -1,6 +1,6 @@
 name: rot13
 description: Flutter package to encode / decode string to ROT13 (rotate by 13 places)
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/aqeelshamz/rot13
 
 environment:

@@ -10,6 +10,6 @@
 
 * Migrated to null safety
 
-## [1.0.2] - Performance
+## [1.0.3] - Performance
 
-* Performance Improved
+* Performance Improved & Formatted
